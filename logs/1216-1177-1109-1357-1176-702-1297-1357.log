@@ -1,0 +1,248 @@
+2024-05-14 20:03:14,572 p=2479 u=auto n=ansible | PLAY [edgerouter update] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:14,587 p=2479 u=auto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:19,815 p=2479 u=auto n=ansible | ok: [gw-unityraymond.msln.net]
+2024-05-14 20:03:19,918 p=2479 u=auto n=ansible | ok: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:20,822 p=2479 u=auto n=ansible | ok: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:20,875 p=2479 u=auto n=ansible | ok: [gw-strattones.msln.net]
+2024-05-14 20:03:20,983 p=2479 u=auto n=ansible | ok: [gw-unity.msln.net]
+2024-05-14 20:03:25,810 p=2479 u=auto n=ansible | ok: [gw-skylodge.msln.net]
+2024-05-14 20:03:25,998 p=2479 u=auto n=ansible | ok: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:03:26,742 p=2479 u=auto n=ansible | ok: [gw-unityfarm.msln.net]
+2024-05-14 20:03:26,765 p=2479 u=auto n=ansible | TASK [saving running config] ****************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:28,989 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:29,024 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:03:29,062 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:03:29,149 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:03:29,183 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:30,933 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:03:31,132 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:03:31,214 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:03:31,227 p=2479 u=auto n=ansible | TASK [determining model] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:32,445 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:03:32,479 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:32,506 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:03:32,602 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:03:32,690 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:33,741 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:03:33,763 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:03:33,858 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:03:33,869 p=2479 u=auto n=ansible | TASK [build command] ************************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:33,913 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,935 p=2479 u=auto n=ansible | ok: [gw-unity.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:33,935 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,938 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,948 p=2479 u=auto n=ansible | ok: [gw-unityyarmouth.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:33,948 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,965 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,970 p=2479 u=auto n=ansible | ok: [gw-unityraymond.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:33,971 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:33,993 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,018 p=2479 u=auto n=ansible | ok: [gw-strattones.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:34,019 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,029 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,045 p=2479 u=auto n=ansible | ok: [gw-unityfreeport.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:34,046 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,048 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,058 p=2479 u=auto n=ansible | ok: [gw-skylodge.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:34,059 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,082 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,092 p=2479 u=auto n=ansible | ok: [gw-skylodgemrvc.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:34,092 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,104 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,112 p=2479 u=auto n=ansible | ok: [gw-unityfarm.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 20:03:34,112 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 20:03:34,126 p=2479 u=auto n=ansible | TASK [print model] **************************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,186 p=2479 u=auto n=ansible | ok: [gw-unity.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,212 p=2479 u=auto n=ansible | ok: [gw-unityyarmouth.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,235 p=2479 u=auto n=ansible | ok: [gw-unityraymond.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,261 p=2479 u=auto n=ansible | ok: [gw-strattones.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,285 p=2479 u=auto n=ansible | ok: [gw-unityfreeport.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,309 p=2479 u=auto n=ansible | ok: [gw-skylodge.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,311 p=2479 u=auto n=ansible | ok: [gw-skylodgemrvc.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,334 p=2479 u=auto n=ansible | ok: [gw-unityfarm.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 20:03:34,348 p=2479 u=auto n=ansible | TASK [debug model] **************************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,409 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net]
+2024-05-14 20:03:34,436 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:34,461 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net]
+2024-05-14 20:03:34,486 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net]
+2024-05-14 20:03:34,511 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:34,536 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net]
+2024-05-14 20:03:34,543 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:03:34,568 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net]
+2024-05-14 20:03:34,582 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,600 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net]
+2024-05-14 20:03:34,611 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,625 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:34,634 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,644 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net]
+2024-05-14 20:03:34,656 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,667 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net]
+2024-05-14 20:03:34,677 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,689 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:34,699 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,710 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net]
+2024-05-14 20:03:34,721 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,733 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:03:34,744 p=2479 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:34,757 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net]
+2024-05-14 20:03:34,767 p=2479 u=auto n=ansible | TASK [pulling image] ************************************************************************************************************************************************************************************************************************
+2024-05-14 20:03:50,705 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:03:50,781 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:03:51,226 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:03:51,262 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:03:58,302 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:04:05,155 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:04:06,897 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:05:04,799 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:05:04,809 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,820 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net]
+2024-05-14 20:05:04,829 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,839 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net]
+2024-05-14 20:05:04,848 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,860 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net]
+2024-05-14 20:05:04,871 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,881 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net]
+2024-05-14 20:05:04,891 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,901 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net]
+2024-05-14 20:05:04,910 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,921 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net]
+2024-05-14 20:05:04,932 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,944 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:05:04,953 p=2479 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 20:05:04,963 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net]
+2024-05-14 20:05:04,972 p=2479 u=auto n=ansible | TASK [if stdout or stderr print to log] *****************************************************************************************************************************************************************************************************
+2024-05-14 20:05:05,029 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net]
+2024-05-14 20:05:05,053 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net]
+2024-05-14 20:05:05,078 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net]
+2024-05-14 20:05:05,115 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net]
+2024-05-14 20:05:05,141 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net]
+2024-05-14 20:05:05,170 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net]
+2024-05-14 20:05:05,172 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:05:05,188 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net]
+2024-05-14 20:05:05,205 p=2479 u=auto n=ansible | TASK [upgrade successfull! -> REBOOTING HOST] ***********************************************************************************************************************************************************************************************
+2024-05-14 20:07:02,104 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:07:04,632 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:07:07,240 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:07:10,589 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:07:15,973 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:08:59,163 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:09:03,169 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:09:11,528 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:09:11,539 p=2479 u=auto n=ansible | TASK [pulling build id] *********************************************************************************************************************************************************************************************************************
+2024-05-14 20:09:15,062 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:09:15,086 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:09:15,113 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:09:15,115 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:09:15,243 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:09:17,954 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:09:17,984 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:09:18,087 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:09:18,098 p=2479 u=auto n=ansible | TASK [verifying new build id] ***************************************************************************************************************************************************************************************************************
+2024-05-14 20:09:18,164 p=2479 u=auto n=ansible | ok: [gw-unity.msln.net] => {
+    "msg": "  \"Upgrade for GW-Unity was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,200 p=2479 u=auto n=ansible | ok: [gw-unityyarmouth.msln.net] => {
+    "msg": "  \"Upgrade for gw-unityyarmouth was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,229 p=2479 u=auto n=ansible | ok: [gw-unityraymond.msln.net] => {
+    "msg": "  \"Upgrade for gw-unityraymond was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,262 p=2479 u=auto n=ansible | ok: [gw-strattones.msln.net] => {
+    "msg": "  \"Upgrade for GW-StrattonES was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,297 p=2479 u=auto n=ansible | ok: [gw-unityfreeport.msln.net] => {
+    "msg": "  \"Upgrade for gw-unityfreeport was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,340 p=2479 u=auto n=ansible | ok: [gw-skylodge.msln.net] => {
+    "msg": "  \"Upgrade for GW-SkyLodge was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,341 p=2479 u=auto n=ansible | ok: [gw-skylodgemrvc.msln.net] => {
+    "msg": "  \"Upgrade for GW-SkyLodgeMRVC was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,372 p=2479 u=auto n=ansible | ok: [gw-unityfarm.msln.net] => {
+    "msg": "  \"Upgrade for GW-UNITYFARM was completed successfully!\"\n"
+}
+2024-05-14 20:09:18,385 p=2479 u=auto n=ansible | TASK [deleting old image] *******************************************************************************************************************************************************************************************************************
+2024-05-14 20:09:21,439 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:09:21,561 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:09:22,226 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:09:22,252 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:09:22,282 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:09:25,173 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:09:25,439 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:09:25,994 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:09:26,006 p=2479 u=auto n=ansible | TASK [debug image removal] ******************************************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,065 p=2479 u=auto n=ansible | ok: [gw-unity.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv1.10.1.5067768.180306.1010    \n\nYou are about to delete image [v1.10.1.5067768.180306.1010]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,098 p=2479 u=auto n=ansible | ok: [gw-unityyarmouth.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv1.10.11.5274269.200221.1029   \n\nYou are about to delete image [v1.10.11.5274269.200221.1029]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,121 p=2479 u=auto n=ansible | ok: [gw-unityraymond.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv1.10.9.5167157.190214.1229    \n\nYou are about to delete image [v1.10.9.5167157.190214.1229]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,159 p=2479 u=auto n=ansible | ok: [gw-strattones.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,184 p=2479 u=auto n=ansible | ok: [gw-unityfreeport.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,210 p=2479 u=auto n=ansible | ok: [gw-skylodge.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,211 p=2479 u=auto n=ansible | ok: [gw-skylodgemrvc.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.6.5574652.221230.1020 \n\nYou are about to delete image [v2.0.9-hotfix.6.5574652.221230.1020]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,233 p=2479 u=auto n=ansible | ok: [gw-unityfarm.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.6.5574652.221230.1020 \n\nYou are about to delete image [v2.0.9-hotfix.6.5574652.221230.1020]\nRemoving old image... Done\"\n"
+}
+2024-05-14 20:09:26,251 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,263 p=2479 u=auto n=ansible | skipping: [gw-unity.msln.net]
+2024-05-14 20:09:26,274 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,285 p=2479 u=auto n=ansible | skipping: [gw-unityyarmouth.msln.net]
+2024-05-14 20:09:26,295 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,310 p=2479 u=auto n=ansible | skipping: [gw-unityraymond.msln.net]
+2024-05-14 20:09:26,320 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,333 p=2479 u=auto n=ansible | skipping: [gw-strattones.msln.net]
+2024-05-14 20:09:26,343 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,353 p=2479 u=auto n=ansible | skipping: [gw-unityfreeport.msln.net]
+2024-05-14 20:09:26,363 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,374 p=2479 u=auto n=ansible | skipping: [gw-skylodge.msln.net]
+2024-05-14 20:09:26,385 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,423 p=2479 u=auto n=ansible | skipping: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:09:26,432 p=2479 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 20:09:26,443 p=2479 u=auto n=ansible | skipping: [gw-unityfarm.msln.net]
+2024-05-14 20:09:26,453 p=2479 u=auto n=ansible | TASK [image successfully deleted! -> REBOOTING HOST] ****************************************************************************************************************************************************************************************
+2024-05-14 20:11:20,875 p=2479 u=auto n=ansible | changed: [gw-unityfreeport.msln.net]
+2024-05-14 20:11:21,889 p=2479 u=auto n=ansible | changed: [gw-unity.msln.net]
+2024-05-14 20:11:21,971 p=2479 u=auto n=ansible | changed: [gw-unityyarmouth.msln.net]
+2024-05-14 20:11:29,132 p=2479 u=auto n=ansible | changed: [gw-unityraymond.msln.net]
+2024-05-14 20:11:39,751 p=2479 u=auto n=ansible | changed: [gw-strattones.msln.net]
+2024-05-14 20:13:17,238 p=2479 u=auto n=ansible | changed: [gw-unityfarm.msln.net]
+2024-05-14 20:13:18,534 p=2479 u=auto n=ansible | changed: [gw-skylodgemrvc.msln.net]
+2024-05-14 20:13:25,491 p=2479 u=auto n=ansible | changed: [gw-skylodge.msln.net]
+2024-05-14 20:13:25,514 p=2479 u=auto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-skylodge.msln.net       : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-skylodgemrvc.msln.net   : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-strattones.msln.net     : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-unity.msln.net          : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-unityfarm.msln.net      : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-unityfreeport.msln.net  : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,515 p=2479 u=auto n=ansible | gw-unityraymond.msln.net   : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 20:13:25,516 p=2479 u=auto n=ansible | gw-unityyarmouth.msln.net  : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

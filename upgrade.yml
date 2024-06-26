@@ -1,0 +1,97 @@
+- name: edgerouter update
+  hosts: target
+  tasks:
+    - name: saving running config
+      command: "perl /opt/vyatta/sbin/vyatta-save-config.pl"
+
+    - name: determining model
+      shell: "/usr/sbin/ubnt-hal show-version | grep 'HW model' | sed 's/HW model: *//'"
+      become: true
+      register: model_output
+    - name: build command
+      set_fact:
+        upgrade_command: "/usr/bin/ubnt-upgrade --upgrade-noprompt {{ item.file }}"
+      loop:
+        - { model: "EdgeRouter Pro 8-Port", file: "http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar"   }
+        - { model: "EdgeRouter 4",          file: "http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar"   }
+        - { model: "EdgeRouter Infinity",   file: "http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar"  }
+      when: model_output.stdout == item.model
+
+    - name: print model
+      debug:
+        msg: "{{ model_output.stdout }}"
+
+    - name: unrecognized model!
+      when: upgrade_command is undefined
+      block:
+        - name: debug model
+          debug:
+            msg: "Unrecognized model -> {{ model_output.stdout }}"
+        
+        - name: end play for host
+          meta: end_host
+
+    - name: pulling image
+      command: "{{ upgrade_command }}" 
+      become: true
+      failed_when: upgrade_output.rc > 1 # Throws rc=1 for 'already upgraded' which is fine
+      register: upgrade_output
+   
+    - name: checking for unexpected output and printing to log
+      when: upgrade_output.stderr != ""
+      block:
+        - name: terminating play for host
+          meta: end_host
+        
+        - name:  if stdout or stderr print to log
+          debug:
+            msg: "{{ upgrade_output.stdout }} {{ upgrade_output.stderr }}"
+    
+    - name: upgrade successfull! -> REBOOTING HOST
+      reboot:
+        reboot_command: sudo shutdown -r now
+
+    - name: pulling build id
+      shell: "/usr/sbin/ubnt-hal show-version | grep 'Build ID:' | sed 's/Build ID: *//'"
+      register: build_id
+    - name: verifying new build id
+      debug:
+        msg: >
+          {% if build_id.stdout == "5622762" %}
+            "Upgrade for {{ ansible_hostname }} was completed successfully!"
+          {% else %}
+            "Upgrade for {{ ansible_hostname }} failed: New 'Build ID' does not match expected value"
+          {% endif %}
+    
+    - name: deleting old image
+      command: "/usr/bin/ubnt-upgrade --delete-noprompt"
+      become: true
+      register: delete_output
+  
+    - name: debug image removal
+      debug:
+        msg: >
+          {% if delete_output.stderr == "" %}
+            "{{ delete_output.stdout }}"
+          {% else %}
+            "{{ delete_output.stderr }}"
+          {% endif %}
+
+    - name: ending play for host if error in image removal
+      meta: end_host
+      when: delete_output.stderr != ""
+        # Commented out because second reboot is unecessary
+        #    - name: image successfully deleted! -> REBOOTING HOST
+        #  reboot:
+        # reboot_command: sudo shutdown -r now
+    - name: checking whether additional actions are required
+      command: "cat /etc/motd"
+      register: motd
+    - name: check if additional actions needed
+      debug:
+        msg: >
+          {% if motd.stdout == "Welcome to EdgeOS" %}
+            "Install Completed Successfully!"
+          {% else %}
+            "Additional Actions Required: Please login to this router and check what still needs to be done!"
+          {% endif %}

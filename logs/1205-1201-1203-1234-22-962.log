@@ -1,0 +1,190 @@
+2024-05-14 19:49:05,844 p=1121 u=auto n=ansible | PLAY [edgerouter update] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:05,858 p=1121 u=auto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:12,375 p=1121 u=auto n=ansible | ok: [gw-downeastcf.msln.net]
+2024-05-14 19:49:12,400 p=1121 u=auto n=ansible | ok: [gw-longcreek.msln.net]
+2024-05-14 19:49:12,551 p=1121 u=auto n=ansible | ok: [gw-bolduccf.msln.net]
+2024-05-14 19:49:12,621 p=1121 u=auto n=ansible | ok: [gw-smrc.msln.net]
+2024-05-14 19:49:12,778 p=1121 u=auto n=ansible | ok: [gw-msp.msln.net]
+2024-05-14 19:49:17,124 p=1121 u=auto n=ansible | ok: [gw-newvineyardlib.msln.net]
+2024-05-14 19:49:17,147 p=1121 u=auto n=ansible | TASK [saving running config] ****************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:19,498 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:49:19,503 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:49:19,541 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:49:19,567 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:49:19,622 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:49:21,295 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:49:21,308 p=1121 u=auto n=ansible | TASK [determining model] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:22,697 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:49:22,698 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:49:22,734 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:49:22,748 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:49:22,759 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:49:23,805 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:49:23,818 p=1121 u=auto n=ansible | TASK [build command] ************************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:23,876 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,889 p=1121 u=auto n=ansible | ok: [gw-smrc.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:23,890 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,890 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,896 p=1121 u=auto n=ansible | ok: [gw-bolduccf.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:23,902 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,923 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,934 p=1121 u=auto n=ansible | ok: [gw-msp.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:23,935 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,952 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,964 p=1121 u=auto n=ansible | ok: [gw-downeastcf.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:23,965 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,984 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:23,992 p=1121 u=auto n=ansible | ok: [gw-longcreek.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:23,992 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:24,017 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net] => (item={'model': 'EdgeRouter Pro 8-Port', 'file': 'http://130.111.32.130/ubnt/ER-e200.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:24,027 p=1121 u=auto n=ansible | ok: [gw-newvineyardlib.msln.net] => (item={'model': 'EdgeRouter 4', 'file': 'http://130.111.32.130/ubnt/ER-e300.v2.0.9-hotfix.7.5622762.tar'})
+2024-05-14 19:49:24,027 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net] => (item={'model': 'EdgeRouter Infinity', 'file': 'http://130.111.32.130/ubnt/ER-e1000.v2.0.9-hotfix.7.5622762.tar'}) 
+2024-05-14 19:49:24,042 p=1121 u=auto n=ansible | TASK [print model] **************************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,111 p=1121 u=auto n=ansible | ok: [gw-smrc.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,140 p=1121 u=auto n=ansible | ok: [gw-bolduccf.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,168 p=1121 u=auto n=ansible | ok: [gw-msp.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,189 p=1121 u=auto n=ansible | ok: [gw-downeastcf.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,192 p=1121 u=auto n=ansible | ok: [gw-longcreek.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,213 p=1121 u=auto n=ansible | ok: [gw-newvineyardlib.msln.net] => {
+    "msg": "EdgeRouter 4"
+}
+2024-05-14 19:49:24,225 p=1121 u=auto n=ansible | TASK [debug model] **************************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,280 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net]
+2024-05-14 19:49:24,304 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net]
+2024-05-14 19:49:24,329 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net]
+2024-05-14 19:49:24,355 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net]
+2024-05-14 19:49:24,361 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net]
+2024-05-14 19:49:24,384 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net]
+2024-05-14 19:49:24,396 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,414 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net]
+2024-05-14 19:49:24,450 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,462 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net]
+2024-05-14 19:49:24,472 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,486 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net]
+2024-05-14 19:49:24,497 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,511 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net]
+2024-05-14 19:49:24,521 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,534 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net]
+2024-05-14 19:49:24,544 p=1121 u=auto n=ansible | TASK [end play for host] ********************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:24,556 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net]
+2024-05-14 19:49:24,570 p=1121 u=auto n=ansible | TASK [pulling image] ************************************************************************************************************************************************************************************************************************
+2024-05-14 19:49:41,169 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:49:41,175 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:49:48,077 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:49:55,738 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:50:39,561 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:50:48,154 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:50:48,165 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,178 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net]
+2024-05-14 19:50:48,190 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,201 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net]
+2024-05-14 19:50:48,211 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,221 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net]
+2024-05-14 19:50:48,231 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,241 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net]
+2024-05-14 19:50:48,254 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,265 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net]
+2024-05-14 19:50:48,275 p=1121 u=auto n=ansible | TASK [terminating play for host] ************************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,285 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net]
+2024-05-14 19:50:48,295 p=1121 u=auto n=ansible | TASK [if stdout or stderr print to log] *****************************************************************************************************************************************************************************************************
+2024-05-14 19:50:48,354 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net]
+2024-05-14 19:50:48,379 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net]
+2024-05-14 19:50:48,402 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net]
+2024-05-14 19:50:48,426 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net]
+2024-05-14 19:50:48,427 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net]
+2024-05-14 19:50:48,443 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net]
+2024-05-14 19:50:48,457 p=1121 u=auto n=ansible | TASK [upgrade successfull! -> REBOOTING HOST] ***********************************************************************************************************************************************************************************************
+2024-05-14 19:52:43,390 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:52:43,549 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:52:45,480 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:52:56,949 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:52:57,853 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:54:42,003 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:54:42,014 p=1121 u=auto n=ansible | TASK [pulling build id] *********************************************************************************************************************************************************************************************************************
+2024-05-14 19:54:45,590 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:54:45,619 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:54:45,649 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:54:45,670 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:54:45,872 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:54:48,489 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:54:48,504 p=1121 u=auto n=ansible | TASK [verifying new build id] ***************************************************************************************************************************************************************************************************************
+2024-05-14 19:54:48,561 p=1121 u=auto n=ansible | ok: [gw-smrc.msln.net] => {
+    "msg": "  \"Upgrade for GW-SMRC was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,586 p=1121 u=auto n=ansible | ok: [gw-bolduccf.msln.net] => {
+    "msg": "  \"Upgrade for GW-BOLDUCCF was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,610 p=1121 u=auto n=ansible | ok: [gw-msp.msln.net] => {
+    "msg": "  \"Upgrade for GW-MSP was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,633 p=1121 u=auto n=ansible | ok: [gw-downeastcf.msln.net] => {
+    "msg": "  \"Upgrade for GW-DownEastCF was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,635 p=1121 u=auto n=ansible | ok: [gw-longcreek.msln.net] => {
+    "msg": "  \"Upgrade for GW-LongCreek was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,657 p=1121 u=auto n=ansible | ok: [gw-newvineyardlib.msln.net] => {
+    "msg": "  \"Upgrade for GW-NewVineyardLib was completed successfully!\"\n"
+}
+2024-05-14 19:54:48,670 p=1121 u=auto n=ansible | TASK [deleting old image] *******************************************************************************************************************************************************************************************************************
+2024-05-14 19:54:52,512 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:54:52,515 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:54:52,593 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:54:53,209 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:54:53,435 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:54:55,550 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:54:55,561 p=1121 u=auto n=ansible | TASK [debug image removal] ******************************************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,625 p=1121 u=auto n=ansible | ok: [gw-smrc.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,649 p=1121 u=auto n=ansible | ok: [gw-bolduccf.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.6.5574652.221230.1020 \n\nYou are about to delete image [v2.0.9-hotfix.6.5574652.221230.1020]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,673 p=1121 u=auto n=ansible | ok: [gw-msp.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.6.5574652.221230.1020 \n\nYou are about to delete image [v2.0.9-hotfix.6.5574652.221230.1020]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,697 p=1121 u=auto n=ansible | ok: [gw-downeastcf.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,699 p=1121 u=auto n=ansible | ok: [gw-longcreek.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv2.0.9-hotfix.2.5402463.210511.1317 \n\nYou are about to delete image [v2.0.9-hotfix.2.5402463.210511.1317]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,721 p=1121 u=auto n=ansible | ok: [gw-newvineyardlib.msln.net] => {
+    "msg": "  \"The system currently has the following image(s) installed:\n\nv2.0.9-hotfix.7.5622762.230615.1131 (running image) (default boot) \nv1.10.11.5274269.200221.1029   \n\nYou are about to delete image [v1.10.11.5274269.200221.1029]\nRemoving old image... Done\"\n"
+}
+2024-05-14 19:54:55,733 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,744 p=1121 u=auto n=ansible | skipping: [gw-smrc.msln.net]
+2024-05-14 19:54:55,754 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,764 p=1121 u=auto n=ansible | skipping: [gw-bolduccf.msln.net]
+2024-05-14 19:54:55,773 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,786 p=1121 u=auto n=ansible | skipping: [gw-msp.msln.net]
+2024-05-14 19:54:55,819 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,829 p=1121 u=auto n=ansible | skipping: [gw-downeastcf.msln.net]
+2024-05-14 19:54:55,838 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,849 p=1121 u=auto n=ansible | skipping: [gw-longcreek.msln.net]
+2024-05-14 19:54:55,857 p=1121 u=auto n=ansible | TASK [ending play for host if error in image removal] ***************************************************************************************************************************************************************************************
+2024-05-14 19:54:55,867 p=1121 u=auto n=ansible | skipping: [gw-newvineyardlib.msln.net]
+2024-05-14 19:54:55,876 p=1121 u=auto n=ansible | TASK [image successfully deleted! -> REBOOTING HOST] ****************************************************************************************************************************************************************************************
+2024-05-14 19:56:49,797 p=1121 u=auto n=ansible | changed: [gw-longcreek.msln.net]
+2024-05-14 19:56:50,547 p=1121 u=auto n=ansible | changed: [gw-smrc.msln.net]
+2024-05-14 19:56:50,805 p=1121 u=auto n=ansible | changed: [gw-downeastcf.msln.net]
+2024-05-14 19:57:01,286 p=1121 u=auto n=ansible | changed: [gw-msp.msln.net]
+2024-05-14 19:57:01,685 p=1121 u=auto n=ansible | changed: [gw-bolduccf.msln.net]
+2024-05-14 19:58:58,093 p=1121 u=auto n=ansible | changed: [gw-newvineyardlib.msln.net]
+2024-05-14 19:58:58,116 p=1121 u=auto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-05-14 19:58:58,116 p=1121 u=auto n=ansible | gw-bolduccf.msln.net       : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 19:58:58,117 p=1121 u=auto n=ansible | gw-downeastcf.msln.net     : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 19:58:58,117 p=1121 u=auto n=ansible | gw-longcreek.msln.net      : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 19:58:58,117 p=1121 u=auto n=ansible | gw-msp.msln.net            : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 19:58:58,117 p=1121 u=auto n=ansible | gw-newvineyardlib.msln.net : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2024-05-14 19:58:58,117 p=1121 u=auto n=ansible | gw-smrc.msln.net           : ok=12   changed=7    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
